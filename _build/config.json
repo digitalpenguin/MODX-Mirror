@@ -3,7 +3,7 @@
   "lowCaseName": "mirror",
   "description": "Synchronizes elements from filesystem with database.",
   "author": "Digital Butter",
-  "version": "1.0-beta4",
+  "version": "1.0-beta5",
   "package": {
     "elements": {
       "plugins": [{

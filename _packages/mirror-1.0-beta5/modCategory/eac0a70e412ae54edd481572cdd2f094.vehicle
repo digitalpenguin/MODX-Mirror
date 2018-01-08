@@ -1,0 +1,128 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      'ed8d5a0c741106fbf14a38ccc8a7216d' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'e180fd1b2862962c90b34c748a8ea18c' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnWebPageInit","priority":0,"propertyset":0}',
+              'guid' => 'b2f494b00bf198307bfc0f05b011daa7',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnWebPageInit',
+              ),
+              'signature' => '446664b45a4ed40d9e6ab372b6c18189',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"mirror","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\/\\n$flushParameterName = trim($modx->getOption(\'flushParameter\', $scriptProperties, \'\'));\\nif ($modx->event->name != \'OnWebPageInit\' || $modx->context->get(\'key\') == \'mgr\' || (!empty($flushParameterName) && !isset($_GET[$flushParameterName]))) {\\n\\treturn;\\n} else {\\n\\t$resourceId = $modx->resourceIdentifier;\\n\\tif ($modx->resourceMethod == \'alias\') {\\n\\t\\t$resourceId = $modx->aliasMap[$resourceId];\\n\\t}\\n\\tif (!is_numeric($resourceId)) {\\n\\t\\treturn;\\n\\t}\\n}\\nunset($scriptProperties[\'flushParameter\']);\\nrequire_once $modx->getOption(\'mirror.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/mirror\\/\') . \'model\\/mirror\\/mirror.class.php\';\\n\\n$objectsMeta = array(\\n\\t\'chunks\' => array(\\n\\t\\t\'extension\' => \'html\',\\n\\t\\t\'className\' => \'modChunk\',\\n\\t\\t\'processComments\' => false,\\n\\t),\\n\\t\'plugins\' => array(\\n\\t\\t\'extension\' => \'php\',\\n\\t\\t\'className\' => \'modPlugin\',\\n\\t\\t\'processComments\' => true,\\n\\t),\\n\\t\'snippets\' => array(\\n\\t\\t\'extension\' => \'php\',\\n\\t\\t\'className\' => \'modSnippet\',\\n\\t\\t\'processComments\' => true,\\n\\t),\\n\\t\'templates\' => array(\\n\\t\\t\'extension\' => \'html\',\\n\\t\\t\'className\' => \'modTemplate\',\\n\\t\\t\'processComments\' => false,\\n\\t),\\n);\\n$mirror = new Mirror($modx, $scriptProperties);\\n$mirror->process($objectsMeta);\\n$modx->cacheManager->refresh();","locked":0,"properties":"a:6:{s:12:\\"cacheEnabled\\";a:7:{s:4:\\"name\\";s:12:\\"cacheEnabled\\";s:4:\\"desc\\";s:24:\\"mirror.prop.cacheEnabled\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";b:1;s:7:\\"lexicon\\";s:17:\\"mirror:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:14:\\"flushParameter\\";a:7:{s:4:\\"name\\";s:14:\\"flushParameter\\";s:4:\\"desc\\";s:26:\\"mirror.prop.flushParameter\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:5:\\"flush\\";s:7:\\"lexicon\\";s:17:\\"mirror:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:13:\\"logicalDelete\\";a:7:{s:4:\\"name\\";s:13:\\"logicalDelete\\";s:4:\\"desc\\";s:25:\\"mirror.prop.logicalDelete\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";b:1;s:7:\\"lexicon\\";s:17:\\"mirror:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:15:\\"processComments\\";a:7:{s:4:\\"name\\";s:15:\\"processComments\\";s:4:\\"desc\\";s:27:\\"mirror.prop.processComments\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";b:1;s:7:\\"lexicon\\";s:17:\\"mirror:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:14:\\"verboseLogging\\";a:7:{s:4:\\"name\\";s:14:\\"verboseLogging\\";s:4:\\"desc\\";s:26:\\"mirror.prop.verboseLogging\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";b:1;s:7:\\"lexicon\\";s:17:\\"mirror:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:13:\\"filesLocation\\";a:7:{s:4:\\"name\\";s:13:\\"filesLocation\\";s:4:\\"desc\\";s:25:\\"mirror.prop.filesLocation\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:11:\\"web_assets\\/\\";s:7:\\"lexicon\\";s:17:\\"mirror:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\/\\n$flushParameterName = trim($modx->getOption(\'flushParameter\', $scriptProperties, \'\'));\\nif ($modx->event->name != \'OnWebPageInit\' || $modx->context->get(\'key\') == \'mgr\' || (!empty($flushParameterName) && !isset($_GET[$flushParameterName]))) {\\n\\treturn;\\n} else {\\n\\t$resourceId = $modx->resourceIdentifier;\\n\\tif ($modx->resourceMethod == \'alias\') {\\n\\t\\t$resourceId = $modx->aliasMap[$resourceId];\\n\\t}\\n\\tif (!is_numeric($resourceId)) {\\n\\t\\treturn;\\n\\t}\\n}\\nunset($scriptProperties[\'flushParameter\']);\\nrequire_once $modx->getOption(\'mirror.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/mirror\\/\') . \'model\\/mirror\\/mirror.class.php\';\\n\\n$objectsMeta = array(\\n\\t\'chunks\' => array(\\n\\t\\t\'extension\' => \'html\',\\n\\t\\t\'className\' => \'modChunk\',\\n\\t\\t\'processComments\' => false,\\n\\t),\\n\\t\'plugins\' => array(\\n\\t\\t\'extension\' => \'php\',\\n\\t\\t\'className\' => \'modPlugin\',\\n\\t\\t\'processComments\' => true,\\n\\t),\\n\\t\'snippets\' => array(\\n\\t\\t\'extension\' => \'php\',\\n\\t\\t\'className\' => \'modSnippet\',\\n\\t\\t\'processComments\' => true,\\n\\t),\\n\\t\'templates\' => array(\\n\\t\\t\'extension\' => \'html\',\\n\\t\\t\'className\' => \'modTemplate\',\\n\\t\\t\'processComments\' => false,\\n\\t),\\n);\\n$mirror = new Mirror($modx, $scriptProperties);\\n$mirror->process($objectsMeta);\\n$modx->cacheManager->refresh();"}',
+        'guid' => 'ac23dc687894a56d14279c6424294dcb',
+        'native_key' => NULL,
+        'signature' => 'd904b38de32a2e1490d4a124a19ac96b',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Children' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'parent',
+        1 => 'category',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'mirror',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mirror-1.0-beta5\\/modCategory\\/eac0a70e412ae54edd481572cdd2f094\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"mirror"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '89a62d9b059e551f173090f510b8c9af',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'eac0a70e412ae54edd481572cdd2f094',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"Mirror","rank":0}',
+);
