@@ -31,7 +31,7 @@ class Mirror
 			'processComments' => true,
 			'verboseLogging' => true,
 			'logicalDelete' => true,
-			'assetsPath' => $modx->getOption('base_path') . 'web_assets/',
+			'assetsPath' => $modx->getOption('base_path') . $config['filesLocation'],
 		), $config);
 		$this->_config['assetsPath'] = rtrim($this->_config['assetsPath'], '/\\') . '/';
 		$assetsPath = $this->getOption('assetsPath');

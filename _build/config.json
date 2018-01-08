@@ -40,6 +40,12 @@
           ,"type": "combo-boolean"
           ,"description": "mirror.prop.verboseLogging"
           ,"lexicon": "mirror:properties"
+        },{
+          "name": "filesLocation"
+          ,"value": "web_assets/"
+          ,"type": "textfield"
+          ,"description": "mirror.prop.filesLocation"
+          ,"lexicon": "mirror:properties"
         }]
       }]
     }
