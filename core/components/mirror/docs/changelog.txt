@@ -1,5 +1,12 @@
 Changelog file for Mirror plugin.
 
+Mirror 1.0-beta5
+====================================
+- This update is a fork of the original MODX-Mirror by Digital Butter. Apparently abandoned.
+- Added support for the MODX Git-Package-Management tool for easy packaging.
+- Added the filesLocation property to allow users to choose where the generated files are stored.
+- Updated Readme.
+
 Mirror 1.0-beta3
 ====================================
 - Added support of plugin events priorities
