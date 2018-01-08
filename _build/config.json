@@ -1,0 +1,47 @@
+{
+  "name": "Mirror",
+  "lowCaseName": "mirror",
+  "description": "Synchronizes elements from filesystem with database.",
+  "author": "Digital Butter",
+  "version": "1.0-beta4",
+  "package": {
+    "elements": {
+      "plugins": [{
+        "name": "mirror"
+        ,"file": "plugin.mirror.php"
+        ,"events": ["OnWebPageInit"]
+        ,"properties":[{
+          "name": "cacheEnabled"
+          ,"value": 1
+          ,"type": "combo-boolean"
+          ,"description": "mirror.prop.cacheEnabled"
+          ,"lexicon": "mirror:properties"
+        },{
+          "name": "flushParameter"
+          ,"value": "flush"
+          ,"type": "textfield"
+          ,"description": "mirror.prop.flushParameter"
+          ,"lexicon": "mirror:properties"
+        },{
+          "name": "logicalDelete"
+          ,"value": 1
+          ,"type": "combo-boolean"
+          ,"description": "mirror.prop.logicalDelete"
+          ,"lexicon": "mirror:properties"
+        },{
+          "name": "processComments"
+          ,"value": 1
+          ,"type": "combo-boolean"
+          ,"description": "mirror.prop.processComments"
+          ,"lexicon": "mirror:properties"
+        },{
+          "name": "verboseLogging"
+          ,"value": 1
+          ,"type": "combo-boolean"
+          ,"description": "mirror.prop.verboseLogging"
+          ,"lexicon": "mirror:properties"
+        }]
+      }]
+    }
+  }
+}
