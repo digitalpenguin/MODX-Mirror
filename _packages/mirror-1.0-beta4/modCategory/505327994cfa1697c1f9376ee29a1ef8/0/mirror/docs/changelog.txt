@@ -1,0 +1,14 @@
+Changelog file for Mirror plugin.
+
+Mirror 1.0-beta3
+====================================
+- Added support of plugin events priorities
+
+Mirror 1.0-beta2
+====================================
+- Added static elements support
+- Added internationalization support
+
+Mirror 1.0-beta1
+====================================
+- First release
